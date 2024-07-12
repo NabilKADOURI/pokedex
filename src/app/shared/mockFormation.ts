@@ -1,0 +1,50 @@
+ export const formationsMock = [ 
+    { title: 'TECHNICIEN D’ASSISTANCE EN INFORMATIQUE',
+      image: "images/TECHN-DASSISTANCE-EN-INFORMATIQUE.png", 
+      stack : 'Formation certifiante RNCP niveau 4',
+      description : "Deviens le « sauveteur informatique », assure-toi de la maintenance des équipements numériques et d'infrastructure.", 
+      date: '9 mois de formation et 2 mois de stage', 
+      place: 20, 
+      price: '3500-7500' },
+
+    { title: 'DÉVELOPPEUR .NET',
+      image: "images/Developpeur-.NET.jpg", 
+      stack : 'Certificat SCRUM MASTER PSM1',
+      description : "Deviens développeur .NET. Monte en compétence sur les systèmes d’information, les méthodes techniques et normes, la gestion de projets, la conception/modélisation, la programmation .net et enfin les outils transverse", 
+      date: '3 mois', 
+      place: 15, 
+      price: '1500-3500' },
+
+    { title: 'CHEF.FE DE PROJET INFORMATIQUE',
+      image: "images/chef-de-projet-informatique.jpg", 
+      stack : 'Certificat SCRUM MASTER PSM1',
+      description : "Deviens chef.fe de projet informatique. Monte en compétence sur les méthodes SCRUM, les systèmes d’informations, les caractéristiques d’un projet informatique, la gestion de projet.", 
+      date: '3 mois', 
+      place: 25, 
+      price: '1800-2700' },
+
+    { title: 'CONCEPTEUR DÉVELOPPEUR D’APPLICATIONS',
+      image: "images/DEVELLOPPEUR-D-APPLICATION.png", 
+      stack : 'Formation certifiante RNCP niveau 6',
+      description : "Deviens développeur fullstack JAVA, monte en compétences en JAVA, Angular, Android, Javascript, ... et passe un Titre Professionnel RNCP de niveau 6 (bac+3/4)", 
+      date: '7 mois de formation et 4 mois de stage', 
+      place: 20, 
+      price: '5500-8500' },
+
+    { title: 'CHARGÉ DE COMMUNICATION DIGITALE',
+      image: "images/charge-de-communication-digitale.jpeg", 
+      stack : 'Certification qualifiante',
+      description : "Deviens un expert en stratégie de communication digitale et en pilotage de projet.", 
+      date: '11 mois de formation et 4 mois de stage', 
+      place: 25, 
+      price: '5500-8700' },
+
+    { title: 'DÉVELOPPEUR WEB ET WEB MOBILE',
+      image: 'images/WEB-ET-WEB-MOBILE.png',
+      stack : 'Formation certifiante RNCP niveau 5', 
+      description : "Deviens développeur fullstack PHP Symfony, monte en compétences en Wordpress, Javascript, Angular ... et passe un Titre Professionnel RNCP de niveau 5 (bac+2).", 
+      date: '7 mois de formation et 2 mois de stage', 
+      place: 20, 
+      price: '4700-8500' } 
+
+  ];

@@ -1,0 +1,54 @@
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test {
+  text-align: center;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.para1 {
+  width: 48%;
+}
+
+.para2 {
+  width: 48%;
+}
+
+
+/* Styles pour le thème par défaut (jour) */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Styles pour le thème sombre */
+.dark-theme {
+  background-color: #333;
+  color: white;
+}
+
+.theme-toggle button {
+  padding: 10px 20px;
+  margin: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #008CBA;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.theme-toggle button:hover {
+  background-color: #005f73;
+}
+
+/* Optionnel : transition pour une commutation en douceur */
+body, .dark-theme {
+  transition: background-color 0.5s, color 0.5s;
+}

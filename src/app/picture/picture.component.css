@@ -1,0 +1,21 @@
+h3 {
+  font-size: 24px;
+  color: #b84a4c;
+  text-align: center;
+}
+
+h4 {
+  font-size: 20px;
+  color: #232b2f;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  font-size: 16px;
+}

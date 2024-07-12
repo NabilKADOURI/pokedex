@@ -1,0 +1,65 @@
+<div class="features-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img
+          src="images/loup.png"
+          alt="image d'une loupe"
+          class="img-fluid mb-3 w-50"
+        />
+        <h3>DÉTECTER</h3>
+        <p>
+          Peu importe ton âge, ton niveau d’étude, ta culture ou d’où tu viens,
+          nous aimons tous les profils engagés pour booster leur avenir.
+        </p>
+        <div class="row">
+          <div class="col-4">
+            <button (click)="moin()" class="btn btn-warning">-</button>
+          </div>
+
+          <div class="col-4 border btn btn-warning">
+            {{ compteur }}
+          </div>
+
+          <div class="col-4">
+            <button (click)="plus()" class="btn btn-warning">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img
+          *ngIf="display"
+          src="images/eclair.png"
+          alt="image d'un éclaire"
+          class="img-fluid mb-3 w-50"
+        />
+        <h3>RÉVÉLER</h3>
+        <p>
+          Tu pensais que c’était impossible alors on l’a fait, ensemble nous
+          révélons ta différence au sein du collectif.
+        </p>
+
+        <button (click)="cacher()" class="btn btn-warning text-white">
+          {{ display ? "Cacher" : "Afficher" }} l'image
+        </button>z
+      </div>
+      <div class="col-md-4">
+        <img
+          src="images/cible.png"
+          alt="image d'une cible"
+          class="img-fluid mb-3 w-50"
+        />
+        <h3>IMPACTER</h3>
+        <p>
+          Prépare-toi à l’impact ! Un monde numérique en plein essor s’ouvre à
+          toi : impose tes codes pour aller au bout de tes projets
+        </p>
+      </div>
+      <div class="col-12">
+        <ul *ngFor="let name of names">
+          <li>{{ name }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

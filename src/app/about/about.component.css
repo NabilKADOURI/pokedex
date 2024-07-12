@@ -1,0 +1,15 @@
+.texte {
+  background-color: #fdd600;
+  padding-top: 60px;
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+p {
+  padding: 0 30px;
+}
+

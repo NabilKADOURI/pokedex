@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6" *ngIf="pokemon">
+      <h1>{{ pokemon.name.fr }}</h1>
+      <img [src]="pokemon.sprites.regular" alt="{{ pokemon.name }}" />
+
+      <div class="d-flex">
+      <img
+      *ngFor="let type of pokemon.types"
+      [src]="type.image"
+      alt="{{ type.name }}"
+      class="mx-2 type"
+    />
+  </div>
+
+    </div>
+
+    <div class="col-6 my-5" *ngIf="pokemon">
+      <h4>Statistiques </h4>
+      <h5>HP :</h5>
+      <div class="progress-container my-3">
+
+        <div class="progress-bar-atk" [style.width.%]="calculatePercentage(pokemon.stats.hp)"></div>
+        <div class="progress-text">{{ pokemon.stats.hp }}</div>
+      </div>
+      <h5>Attaque :</h5>
+      <div class="progress-container my-3">
+
+        <div class="progress-bar-att" [style.width.%]="calculatePercentage(pokemon.stats.atk)"></div>
+        <div class="progress-text">{{ pokemon.stats.atk }}</div>
+      </div>
+      <h5>Défense :</h5>
+      <div class="progress-container my-3">
+
+        <div class="progress-bar-def" [style.width.%]="calculatePercentage(pokemon.stats.def)"></div>
+        <div class="progress-text">{{ pokemon.stats.def }}</div>
+      </div>
+      <h5>Vitesse :</h5>
+      <div class="progress-container my-3">
+
+        <div class="progress-bar-vit" [style.width.%]="calculatePercentage(pokemon.stats.vit)"></div>
+        <div class="progress-text">{{ pokemon.stats.vit }}</div>
+      </div>
+
+
+
+
+
+
+
+
+    </div >
+    <div class="col-12 d-flex justify-content-end ">
+      <a routerLink="../../pokemon">Retour</a>
+    </div>
+    
+  </div>
+</div>

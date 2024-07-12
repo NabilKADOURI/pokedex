@@ -1,0 +1,18 @@
+<div class="container my-5">
+  <div class="row justify-content-center gap-5">
+    <div class="card col-4" style="width: 18rem" *ngFor="let manga of mangas">
+      <div>
+        <img [src]="manga.image" class="card-img-top" alt="manga.title" />
+      </div>
+
+      <div class="card-body">
+        <h3 class="card-title">{{ manga.title }}</h3>
+        <h4 class="card-text">{{ manga.author }}</h4>
+        <p class="card-text"><b>Genre :</b> {{ manga.genre }}</p>
+        <p class="card-text">Vol.{{ manga.volumes }}</p>
+        <p class="card-text"><b>Publication :</b> {{ manga.published }}</p>
+        <a href="#" class="btn btn-warning text-white">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</div>

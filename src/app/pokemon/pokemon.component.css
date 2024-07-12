@@ -1,0 +1,57 @@
+.types img {
+  border-radius: 50%;
+  width: 30px;
+}
+
+.namePok {
+  margin-bottom: 30px;
+  text-align: center;
+  border: 2px solid #59a8d8;
+  border-radius: 10px;
+  transition: border-color 0.5s, box-shadow 0.5s;
+}
+
+.namePok:hover {
+  animation: borderGlow 1.5s infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    border-color: #59a8d8;
+    box-shadow: 0 0 10px #59a8d8;
+  }
+  100% {
+    border-color: #00f7ff;
+    box-shadow: 0 0 20px #00f7ff;
+  }
+}
+
+.card {
+  box-shadow: 4px 6px 11px 1px #cdc6c6;
+  animation: spin 1s ease-in-out;
+}
+
+/* Animation de rotation */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.custom-button {
+  width: 150px; /* Largeur initiale du bouton */
+  background: linear-gradient(to right, #ff0000, #ff0000); /* Dégradé initial (rouge) */
+  background-size: 200% 100%; /* Taille de l'arrière-plan pour l'effet de défilement */
+  transition: background-position 2s ease-in-out; /* Transition pour l'effet de slide */
+}
+
+.custom-button:hover {
+  background: linear-gradient(to right, #ff0000, #ff7e5f, #feb47b); /* Dégradé de couleur (rouge à orange) */
+  background-position: right center; /* Position de l'arrière-plan au survol */
+  background-size: 200% 100%; /* Taille de l'arrière-plan pour l'effet de défilement */
+  transition: background-position 5s ease-in-out; /* Transition pour l'effet de slide */
+}
+

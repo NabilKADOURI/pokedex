@@ -1,0 +1,158 @@
+<div class="container m-5">
+  //convertir
+  <div class="mb-5">
+    <h2>Convertir dollars en euros</h2>
+
+    <p>{{ monnaie }} {{ enDollars ? "$" : "€" }}</p>
+    <button class="btn btn-warning text-white" (click)="convertir()">
+      Convertir
+    </button>
+  </div>
+
+  //MAJEUR/MINEUR
+  <div class="mb-5">
+    <h2>Mineur ou majeur</h2>
+
+    //CHANGER LE BACKGROUND
+
+    <p>{{ message }}</p>
+    <button class="btn btn-warning text-white" (click)="Voyage()">
+      Convertir
+    </button>
+  </div>
+
+  <div class="mb-5">
+    <button class="btn btn-danger text-white" (click)="Colorer('bg bg-danger')">
+      Rouge
+    </button>
+    <button
+      class="btn btn-primary text-white"
+      (click)="Colorer('bg bg-primary')"
+    >
+      Bleu
+    </button>
+    <button
+      class="btn btn-success text-white"
+      (click)="Colorer('bg bg-success')"
+    >
+      Vert
+    </button>
+    <button
+      class="btn btn-warning text-white"
+      (click)="Colorer('bg bg-warning')"
+    >
+      Jaune
+    </button>
+  </div>
+</div>
+
+
+
+<!-- PANIER -->
+
+<div>
+  <h2>Liste des Fruits</h2>
+  <select [(ngModel)]="selectedFruit">
+    <option *ngFor="let fruit of fruits" [ngValue]="fruit">{{fruit.name}} - {{fruit.price}}€</option>
+  </select>
+  <input type="number" [(ngModel)]="quantity" min="1" />
+  <button (click)="ajouterAuPanier()">Ajouter au Panier</button>
+</div>
+
+<div>
+  <h2>Panier</h2>
+  <ul>
+    <li *ngFor="let item of panier; let i = index">
+      {{item.fruit.name}} - {{item.fruit.price}}€ x 
+      <input type="number" [(ngModel)]="item.quantity" (ngModelChange)="modifierQuantite(i, item.quantity)" min="1" />
+      <button (click)="supprimerDuPanier(i)">Supprimer</button>
+    </li>
+  </ul>
+  <h3>Total: {{getTotal()}}€</h3>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="container my-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+        </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+        </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optradio">Option 1</label>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="col-6">
+
+      <div class="panel panel-primary" data-spy="affix" data-offset-top="20">
+        <div id="divTotal" class="panel-heading" >
+            <h3 class="panel-title" >Total</h3>
+        </div>
+        <div class="panel-body">
+            <h2>Rs. 100</h2>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="#/checkout" class="btn btn-danger">Checkout <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+        </a>
+    </div>
+    </div>
+  </div>
+</div> -->

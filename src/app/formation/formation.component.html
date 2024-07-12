@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row m-5">
+    <div class="col-4 mb-5" *ngFor="let formation of formations">
+      <div class="card box-shadow">
+        <div>
+          <img
+            [src]="formation.image"
+            class="card-img-top w-70"
+            alt="formation.title"
+          />
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title text-center d-flex align-items-center">
+            {{ formation.title }}
+          </h5>
+          <h6 class="card-subtitle mb-3 text-body-secondary text-center">
+            {{ formation.stack }}
+          </h6>
+          <p class="card-text lineClamp mb-5" style="text-align: justify">
+            {{ formation.description }}
+          </p>
+
+          <div>
+            <p class="card-text">
+              <b>Nombre de places :</b> {{ formation.place }}
+            </p>
+            <p class="card-text mb-5">
+              <b>Tarif :</b> {{ formation.price }}€ (Nous consulter)
+            </p>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button
+              type="button"
+              class="btn btn-warning text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Sinscrire
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-registration-form-component></app-registration-form-component>

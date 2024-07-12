@@ -1,0 +1,60 @@
+<div class="container my-5">
+
+  <div style="margin-bottom: 5em;">
+    <label for="search">Recherche</label><br>
+    <input type="text" [(ngModel)] = "terms" name="terms">
+  </div>
+  <div class="row justify-content-center gap-5">
+    <div
+      class="card  container"
+      style="width: 18rem"
+      *ngFor="let pokemon of pokemons| search:terms"
+      routerLink="{{ pokemon.pokedex_id }}"
+    >
+      <div>
+        <div class="row justify-content-between">
+          <div class="col-3">
+            <h2 class="card-title pt-3 fs-4"># {{ pokemon.pokedex_id }}</h2>
+          </div>
+
+          <div class="col-5 mt-3 types">
+            <img
+              *ngFor="let type of pokemon.types"
+              [src]="type.image"
+              alt="{{ type.name }}"
+              class="mx-2"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-subtitle namePok">
+          <h3>{{ pokemon.name.fr }}</h3>
+          <img
+            class="img-fluid"
+            [src]="pokemon.sprites.regular"
+            alt="{{ pokemon.name.fr }}"
+          />
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button
+            type="button"
+            class="btn btn-danger text-white custom-button"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Modal
+          </button>
+        </div>
+        <app-pokemon-modal
+          [name]="pokemon.name.fr"
+          [category]="pokemon.category"
+          [hp]="pokemon.stats.hp"
+          [name]="pokemon.name.fr"
+          [image]="pokemon.sprites.regular"
+        ></app-pokemon-modal>
+      </div>
+    </div>
+  </div>
+</div>

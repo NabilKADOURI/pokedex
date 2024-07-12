@@ -1,0 +1,78 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4 text-center" id="exampleModalLabel">
+          Inscription
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form class="m-5">
+          <div class="row">
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Name"
+                  aria-describedby="NameHelp"
+                />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="prenom" />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="date" class="form-label">Date de naissance</label>
+                <input type="date" class="form-control" id="date" />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div id="emailHelp" class="form-text mb-3 text-white-50">
+                Votre e-mail ne sera pas diffusé.
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Fermer
+        </button>
+        <button
+          (click)="validInscription()"
+          type="button"
+          class="btn btn-warning text-white"
+        >
+          Valider
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
